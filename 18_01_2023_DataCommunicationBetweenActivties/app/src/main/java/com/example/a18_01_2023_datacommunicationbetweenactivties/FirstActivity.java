@@ -15,6 +15,7 @@ public class FirstActivity extends Activity{
     TextView txtFromSecondActivity;
     EditText edtUsername;
     Button btnNavigateToSecondActivity;
+    String result;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -41,7 +42,15 @@ public class FirstActivity extends Activity{
             Intent intent = new Intent(FirstActivity.this,SecondActivity.class);
             intent.putExtra("rollNumber",10);
             intent.putExtra("username",edtUsername.getText().toString());
-            startActivity(intent);
+            startActivityForResult(intent,1);
         }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Bundle bundle = data.getExtras();
+        result = bundle.getString("result");
+        txtFromSecondActivity.setText(result);
     }
 }

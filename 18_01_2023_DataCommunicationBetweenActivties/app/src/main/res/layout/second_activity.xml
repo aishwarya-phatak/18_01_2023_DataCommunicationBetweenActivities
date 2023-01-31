@@ -5,6 +5,13 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <EditText
+        android:id="@+id/edtSurname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:hint="Enter Surname" />
+
     <TextView
         android:id="@+id/txtFromFirstActivity"
         android:layout_width="match_parent"
@@ -12,13 +19,6 @@
         android:layout_marginBottom="10dp"
         android:textColor="@color/white"
         android:textSize="16sp" />
-
-    <EditText
-        android:id="@+id/edtSurname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:hint="Enter Surname" />
 
     <Button
         android:id="@+id/btnMoveToFirstActivity"
